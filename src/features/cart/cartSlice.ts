@@ -7,9 +7,9 @@ type stateType = {
 };
 
 const initialState: stateType = {
-  name: 'Cart',
+  name: 'cart slice',
   total: 0,
-  amount: 10,
+  amount: 0,
 };
 
 const cartSlice = createSlice({
