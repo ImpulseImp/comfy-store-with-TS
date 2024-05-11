@@ -6,7 +6,9 @@ const Header = () => {
   const [user, setUser] = useState<{ username: string } | null>({
     username: 'demo user',
   });
-  const handleLogout = () => {};
+  const handleLogout = () => {
+    setUser(null);
+  };
 
   return (
     <header>
