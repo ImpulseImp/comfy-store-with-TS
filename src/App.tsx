@@ -16,17 +16,21 @@ import {
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Landing />,
+    element: <HomeLayout />,
   },
   {
-    path: '/About',
-    element: <About />,
+    path: '/login',
+    element: <Login />,
+  },
+  {
+    path: '/register',
+    element: <Register />,
   },
 ]);
 
 function App() {
   return (
-    <div className='min-h-screen'>
+    <div className=''>
       <RouterProvider router={router} />
     </div>
   );
