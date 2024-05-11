@@ -1,9 +1,9 @@
-import { Header } from '@/components/index';
+import { Header } from "@/components/index";
 
 const Landing = () => {
   return (
-    <div className='min-h-screen bg-primary flex flex-col justify-center items-center'>
-      <h1 className=''>Landing</h1>
+    <div className="flex min-h-screen flex-col items-center justify-center bg-primary">
+      <h1 className="">Landing</h1>
     </div>
   );
 };
