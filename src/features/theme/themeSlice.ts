@@ -1,15 +1,13 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
-type themeType = {
-  mode: 'dark' | 'light';
-};
+export type Theme = "dark" | "light" | "system";
 
-const initialState: themeType = {
-  mode: 'dark',
+const initialState = {
+  name: "dark",
 };
 
 const themeSlice = createSlice({
-  name: 'theme',
+  name: "theme",
   initialState,
   reducers: {},
 });
