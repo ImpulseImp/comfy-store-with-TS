@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <header>
-      <div className="align-element  mr-6 flex  justify-center  py-2 sm:justify-end">
+      <div className="align-element  mr-6 flex  justify-end  py-2 sm:justify-end">
         {user ? (
           <div className="flex items-center gap-x-4 sm:gap-x-8">
             <p>Hello, {user.username}</p>
