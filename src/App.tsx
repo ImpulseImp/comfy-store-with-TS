@@ -1,7 +1,4 @@
-import { Button } from './components/ui/button';
-import { increase } from './features/cart/cartSlice';
-import { useAppDispatch, useAppSelector } from './hooks';
-
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import {
   About,
   Cart,
@@ -16,22 +13,21 @@ import {
   SingleProduct,
 } from './pages/index';
 
-function App() {
-  const dispatch = useAppDispatch();
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <HomeLayout />,
+  },
+  {
+    path: '/About',
+    element: <About />,
+  },
+]);
 
-  // const { amount } = useSelector((store) => store.cart);
-  const { amount } = useAppSelector((state) => state.cartState);
+function App() {
   return (
     <div className='min-h-screen'>
-      <h1 className='text-3xl text-yellow-600'>Hello Impulse</h1>
-      <Button
-        variant='destructive'
-        size='lg'
-        onClick={() => dispatch(increase())}
-      >
-        increase
-      </Button>
-      <h1 className='text-3xl'>Amount: {amount}</h1>
+      <RouterProvider router={router} />
     </div>
   );
 }
