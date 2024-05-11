@@ -7,9 +7,15 @@ const Cart = () => {
       <Link to='/' className='text-3xl text-red-400'>
         back home
       </Link>
-      <Button asChild size='lg'>
-        <Link to='/'>home button</Link>
-      </Button>
+      <div className='m-12'>
+        <Button
+          asChild
+          size='lg'
+          className='bg-yellow-300 text-xl hover:bg-purple-400 mb-4'
+        >
+          <Link to='/'>home button</Link>
+        </Button>
+      </div>
     </div>
   );
 };
