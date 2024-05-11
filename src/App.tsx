@@ -1,6 +1,21 @@
 import { Button } from './components/ui/button';
 import { increase } from './features/cart/cartSlice';
 import { useAppDispatch, useAppSelector } from './hooks';
+
+import {
+  About,
+  Cart,
+  Checkout,
+  Error,
+  HomeLayout,
+  Landing,
+  Login,
+  Orders,
+  Products,
+  Register,
+  SingleProduct,
+} from './pages/index';
+
 function App() {
   const dispatch = useAppDispatch();
 
