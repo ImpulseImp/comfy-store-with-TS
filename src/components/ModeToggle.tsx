@@ -1,4 +1,11 @@
+import { Sun, Moon } from "lucide-react";
+
 const ModeToggle = () => {
-  return <div>ModeToggle</div>;
+  return (
+    <div>
+      <Sun />
+      <Moon />
+    </div>
+  );
 };
 export default ModeToggle;
