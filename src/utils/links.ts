@@ -8,6 +8,6 @@ export const links: Link[] = [
   { href: "about", label: "about" },
   { href: "products", label: "products" },
   { href: "cart", label: "cart" },
-  { href: "checkouts", label: "checkouts" },
+  { href: "checkout", label: "checkout" },
   { href: "orders", label: "orders" },
 ];

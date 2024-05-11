@@ -5,18 +5,36 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { AlignLeft } from "lucide-react";
+import { links } from "@/utils";
+import { NavLink } from "react-router-dom";
+import { Button } from "./ui/button";
+
+console.log(links);
 const LinksDropdown = () => {
   return (
     <div>
       <DropdownMenu>
-        <DropdownMenuTrigger>
-          <AlignLeft />
+        <DropdownMenuTrigger asChild>
+          <Button size="icon" variant="outline">
+            <AlignLeft />
+            {/* <span>Toogle Links</span> */}
+          </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent>
-          <DropdownMenuItem>Profile</DropdownMenuItem>
-          <DropdownMenuItem>Billing</DropdownMenuItem>
-          <DropdownMenuItem>Team</DropdownMenuItem>
-          <DropdownMenuItem>Subscription</DropdownMenuItem>
+        <DropdownMenuContent sideOffset={20} align="start">
+          {links.map((link) => {
+            return (
+              <DropdownMenuItem key={link.label}>
+                <NavLink
+                  className={({ isActive }) => {
+                    return `w-full capitalize ${isActive ? "text-primary" : ""}`;
+                  }}
+                  to={link.href}
+                >
+                  {link.label}
+                </NavLink>
+              </DropdownMenuItem>
+            );
+          })}
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
