@@ -9,7 +9,6 @@ import { links } from "@/utils";
 import { NavLink } from "react-router-dom";
 import { Button } from "./ui/button";
 
-console.log(links);
 const LinksDropdown = () => {
   return (
     <div>
