@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import {
   About,
   Cart,
@@ -11,56 +11,59 @@ import {
   Products,
   Register,
   SingleProduct,
-} from './pages/index';
+} from "./pages/index";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <HomeLayout />,
+    errorElement: <Error />,
     children: [
       {
         index: true,
         element: <Landing />,
       },
       {
-        path: 'products',
+        path: "products",
         element: <Products />,
       },
       {
-        path: 'products/:id',
+        path: "products/:id",
         element: <SingleProduct />,
       },
       {
-        path: 'cart',
+        path: "cart",
         element: <Cart />,
       },
       {
-        path: 'about',
+        path: "about",
         element: <About />,
       },
       {
-        path: 'checkout',
+        path: "checkout",
         element: <Checkout />,
       },
       {
-        path: 'orders',
+        path: "orders",
         element: <Orders />,
       },
     ],
   },
   {
-    path: '/login',
+    path: "/login",
     element: <Login />,
+    errorElement: <Error />,
   },
   {
-    path: '/register',
+    path: "/register",
     element: <Register />,
+    errorElement: <Error />,
   },
 ]);
 
 function App() {
   return (
-    <div className=''>
+    <div className="">
       <RouterProvider router={router} />
     </div>
   );
