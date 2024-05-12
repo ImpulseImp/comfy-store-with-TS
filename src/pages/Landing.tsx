@@ -1,10 +1,11 @@
-import { Header } from "@/components/index";
+import { Hero, FeaturedProducts } from "@/components/index";
 
 const Landing = () => {
   return (
-    <div className=" ">
-      <h1 className="">Landing</h1>
-    </div>
+    <>
+      <Hero />
+      <FeaturedProducts />
+    </>
   );
 };
 export default Landing;
