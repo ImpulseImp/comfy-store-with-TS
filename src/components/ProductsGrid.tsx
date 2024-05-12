@@ -4,9 +4,7 @@ import { formatAsDollars, ProductsResponse } from "@/utils/index";
 
 const ProductsGrid = () => {
   const { data: products } = useLoaderData() as ProductsResponse;
-  const res = useLoaderData() as ProductsResponse;
-  console.log(res);
-  // console.log(res);
+
   return (
     <div className="grid gap-4 pt-12 md:grid-cols-2 lg:grid-cols-3 ">
       {products.map((product) => {
