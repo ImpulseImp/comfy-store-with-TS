@@ -1,6 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
-import { formatAsDollars, ProductsResponse } from "@/utils/index";
+import { formatAsDollars, type ProductsResponse } from "@/utils/index";
 
 const ProductsGrid = () => {
   const { data: products } = useLoaderData() as ProductsResponse;
