@@ -11,11 +11,11 @@ export const loader: LoaderFunction = async (): Promise<ProductsResponse> => {
 
 const Products = () => {
   return (
-    <>
+    <div>
       <Filters />
       <ProductsContainer />
       <PaginationContainer />
-    </>
+    </div>
   );
 };
 export default Products;
