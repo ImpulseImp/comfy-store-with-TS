@@ -2,6 +2,17 @@ export type ProductsResponse = {
   data: Product[];
   meta: ProductsMeta;
 };
+export type Params = {
+  search?: string;
+  category?: string;
+  company?: string;
+  order?: string;
+  price?: string;
+  shipping?: string;
+  page?: number;
+};
+
+export type ProductsResponseWithParams = ProductsResponse & { params: Params };
 
 export type Product = {
   id: number;
