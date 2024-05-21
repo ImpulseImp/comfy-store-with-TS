@@ -1,4 +1,6 @@
+import { Form } from "react-router-dom";
+
 const Filters = () => {
-  return <div>Filters</div>;
+  return <Form></Form>;
 };
 export default Filters;
